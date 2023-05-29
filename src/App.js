@@ -25,7 +25,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/CoinPage" component={CoinPage} />
+          <Route path="/coins/:id" component={CoinPage} />
         </Switch>
       </div>
     </Router> 
