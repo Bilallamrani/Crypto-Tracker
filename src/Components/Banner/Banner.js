@@ -40,7 +40,7 @@ const Banner = () => {
             Crypto Sphere
           </Typography>
           <Typography
-            variant="subtitle"
+            variant="h6"
             style={{
               color: "darkgray",
               textTransform: "capitalize",

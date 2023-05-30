@@ -21,6 +21,7 @@ import {
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Pagination } from "@material-ui/lab";
 
+
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
