@@ -7,6 +7,7 @@ import { Typography, makeStyles, LinearProgress } from "@material-ui/core";
 import CoinInfo from "../Components/CoinInfo";
 import ReactHtmlParser from "react-html-parser";
 import { numberWithCommas } from "../Components/CoinsTable";
+import Header from "../Components/Header";
 
 
 const CoinPage = () => {
@@ -85,7 +86,8 @@ const CoinPage = () => {
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
 
   return (
-    
+
+    <div> <Header />
     <div className={classes.container}>
       <div className={classes.sidebar}>
         <img // Symbol coin sidebar
@@ -155,6 +157,7 @@ const CoinPage = () => {
         </div>
       </div>
       <CoinInfo coin={coin} />
+    </div>
     </div>
   );
 };
