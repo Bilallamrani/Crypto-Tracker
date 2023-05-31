@@ -1,9 +1,12 @@
 import React from "react";
-import bannerImage from "../../Images/banner2.jpg";
+// import bannerImage from "../../Images/banner2.jpg";
 import { Container, Typography, makeStyles } from "@material-ui/core";
 import Carousel from "./Carousel";
 
 const useStyles = makeStyles(() => ({
+  banner: {
+    backgroundImage: "url(./banner2.jpg)",
+  },
   bannerContent: {
     height: 400,
     display: "flex",
@@ -22,10 +25,14 @@ const useStyles = makeStyles(() => ({
 
 const Banner = () => {
   const classes = useStyles();
+    // const bannerImage = "http://localhost:3000/#/src/Images/banner2.jpg";
+
+    // <img src="/Images/banner2.jpg" alt="Banner" />
 
   return (
     <div className={classes.banner}>
-      <div style={{ backgroundImage: `url(${bannerImage})` }}>
+    {/* <img src="./Images/banner2.jpg" alt="Banner" /> */}
+      {/* <div style={{ backgroundImage: `url(${bannerImage})` }}> */}
         <Container className={classes.bannerContent}>
           <div className={classes.tagline}>
             <Typography
@@ -52,7 +59,7 @@ const Banner = () => {
           <Carousel />
         </Container>
       </div>
-    </div>
+    // </div>
   );
 };
 
