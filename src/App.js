@@ -24,9 +24,7 @@ function App() {
       <div className={classes.App}>
         
         <Switch>
-          
           <Route path="/" exact component={HomePage} />
-          <Header />
           <Route path="/coins/:id" component={CoinPage} />
         </Switch>
       </div>
