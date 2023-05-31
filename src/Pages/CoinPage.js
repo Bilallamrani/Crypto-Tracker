@@ -8,6 +8,7 @@ import CoinInfo from "../Components/CoinInfo";
 import ReactHtmlParser from "react-html-parser";
 import { numberWithCommas } from "../Components/CoinsTable";
 
+
 const CoinPage = () => {
   const { id } = useParams();
   const [coin, setCoin] = useState();
@@ -84,6 +85,7 @@ const CoinPage = () => {
   if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
 
   return (
+    
     <div className={classes.container}>
       <div className={classes.sidebar}>
         <img // Symbol coin sidebar
