@@ -2,7 +2,7 @@
   "name": "blockchain",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bilallamrani.github.io/",
+  "homepage": "https://Bilallamrani.github.io/Crypto-Tracker",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/lab": "^4.0.0-alpha.61",

@@ -22,9 +22,11 @@ function App() {
     
     <Router>
       <div className={classes.App}>
-        <Header />
+        
         <Switch>
+          
           <Route path="/" exact component={HomePage} />
+          <Header />
           <Route path="/coins/:id" component={CoinPage} />
         </Switch>
       </div>
