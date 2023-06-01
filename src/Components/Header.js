@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from "react";
 import {
   AppBar,
@@ -12,13 +13,14 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
+import SelectButton from "./SelectButton";
 
 const useStyles = makeStyles(() => ({
   title: {
     flex: 1,
     color: "gold",
     fontFamily: "Montserrat",
-    marginLeft:"-25px",
+    marginLeft: "-25px",
     fontWeight: "bold",
     cursor: "pointer",
   },
@@ -30,6 +32,10 @@ function Header() {
   const history = useHistory();
 
   const { currency, setCurrency } = CryptoState();
+
+  const handleLoginClick = () => {
+    history.push("/login"); // Redirige vers le composant de connexion
+  };
 
   console.log(currency);
 
@@ -50,7 +56,7 @@ function Header() {
             <Typography
               onClick={() => history.push("/")}
               className={classes.title}
-              variant='h5'
+              variant="h5"
             >
               Crypto Sphere
             </Typography>
@@ -62,13 +68,19 @@ function Header() {
                 height: 40,
                 marginRight: 15,
               }}
-
               value={currency}
-              onChange = {(e) => setCurrency(e.target.value)}
+              onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"EUR"}>EUR</MenuItem>
             </Select>
+            <SelectButton
+              variant="contained"
+              color="primary"
+              onClick={handleLoginClick}
+            >
+              Login
+            </SelectButton>
           </Toolbar>
         </Container>
       </AppBar>
